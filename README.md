@@ -1,15 +1,27 @@
 # word-table
 
-> **word-table** is simple javascript library for drawing ascii tables in the `terminal` / `console`.
+> **word-table** is a simple javascript (browserjs / nodejs) library for drawing ascii tables in the `terminal` / `console`. Based on [word-width](https://github.com/hustcc/word-width).
 
 
 [![Build Status](https://travis-ci.org/hustcc/word-table.svg?branch=master)](https://travis-ci.org/hustcc/word-table) [![npm](https://img.shields.io/npm/v/word-table.svg?style=flat-square)](https://www.npmjs.com/package/word-table) [![npm](https://img.shields.io/npm/dt/word-table.svg?style=flat-square)](https://www.npmjs.com/package/word-table) [![npm](https://img.shields.io/npm/l/word-table.svg?style=flat-square)](https://www.npmjs.com/package/word-table)
+
+
+![screenshot](screenshot.png)
 
 
 # 1. Install & Import
 
 > **npm install word-table**
 
+
+ - Import it with `script` tag in HTML.
+
+```js
+<script type="text/javascript" src="word-width.min.js"></script>
+<script type="text/javascript" src="dist/word-table.min.js"></script>
+```
+
+ - Import it with `require`.
 
 ```js
 var WorkTable = require('word-table');
@@ -35,8 +47,6 @@ var wt = new WordTable(header, body);
 console.log(wt.string());
 ```
 
-![screenshot](screenshot.png)
-
 The API is so simple that documents are not needed.
 
 ```js
@@ -51,18 +61,15 @@ wt.reset();
 Detail usage and demo code, can see [here](tests/test.js), and run `npm test` can see the output.
 
 
-# 3. TODO
-
- - Browser Javascript supported.
-
-
-# 4. Test
+# 3. Test
 
 > npm install
 > 
 > npm test
 
+Or you can open the [website](http://git.hust.cc/word-table/), then test it in `Console [F12]`.
 
-# 5. LICENSE
+
+# 4. LICENSE
 
 MIT

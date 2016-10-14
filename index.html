@@ -22,7 +22,10 @@
 <body>
   <h1> word-table </h1>
   <p>
-    Project <a href="https://github.com/hustcc/word-table">word-table</a> is simple javascript library for drawing ascii tables in the terminal / console.
+    Project <a href="https://github.com/hustcc/word-table">word-table</a> is simple javascript library for drawing ascii tables in the terminal / console. 
+  </p>
+  <p>
+    <input type="button" value="Click here then see Console(F12)" onclick="javascript:demo_table();" />
   </p>
   
   <br />
@@ -85,5 +88,21 @@ wt.reset();
   <p>
     The code of word-table hosted on Github, click <a href="https://github.com/hustcc/word-table">here</a>. Welcome to issue or pull request.
   </p>
+  <script type="text/javascript" src="demo/word-width.min.js"></script>
+  <script type="text/javascript" src="dist/word-table.min.js"></script>
+  <script type="text/javascript">
+    function demo_table() {
+      var header = ['id', 'name', 'birthday'];
+      var body = [
+        ['#1', '王小为', '1992-08-01', '备注：hustcc'], 
+        ['#2', '小泥巴', '1992-09-20'],
+        ['#3', '佚名', '保密']
+      ];
+
+      // basic usage
+      var wt = new WordTable(header, body);
+      console.log(wt.string());
+    }
+  </script>
 </body>
 </html>
