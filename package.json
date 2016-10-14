@@ -1,0 +1,43 @@
+{
+  "name": "word-table",
+  "officialName": "word-table",
+  "version": "0.0.1",
+  "summary": "word-table is simple javascript library for drawing ascii tables in the terminal / console.",
+  "description": "word-table is simple javascript library for drawing tables in the terminal/console.",
+  "author": {
+    "name": "hustcc",
+    "url": "http://git.hust.cc/word-table"
+  },
+  "license": "MIT",
+  "keywords": [
+    "word-table",
+    "ascii",
+    "ascii-table",
+    "table",
+    "sheet",
+    "terminal",
+    "console",
+    "terminal table",
+    "console table"
+  ],
+  "main": "src/word-table.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hustcc/word-table"
+  },
+  "bugs": {
+    "url": "https://github.com/hustcc/word-table/issues"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.2",
+    "tape": "^4.6.2"
+  },
+  "scripts": {
+    "lint": "jshint src/word-table.js",
+    "test": "npm run lint && node tests/test.js",
+    "build": "echo building && npm run test"
+  },
+  "dependencies": {
+    "word-width": "^1.0.0"
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>word-table is simple javascript library for drawing ascii tables in the terminal / console.</title>
+  <meta name="keywords" content="word-table, ascii, ascii-table, table, sheet, terminal, console, terminal table, console table" />
+  <meta name="description" content="word-table is simple javascript library for drawing ascii tables in the terminal / console." />
+  <style type="text/css">
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  pre {
+    background-color: #f6dcd7;
+    padding: 10px 15px;
+  }
+  pre.strong {
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <h1> word-table </h1>
+  <p>
+    Project <a href="https://github.com/hustcc/word-table">word-table</a> is simple javascript library for drawing ascii tables in the terminal / console.
+  </p>
+  
+  <br />
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- sorry for ad -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7292810486004926"
+       data-ad-slot="7806394673"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <h2> Install </h2>
+  <pre class="strong">
+npm install word-table </pre>
+  <p> Then import it. </p>
+  <pre>
+var word-table = require('word-table');</pre>
+
+  <h3>Usage</h3>
+  <pre>
+var header = ['id', 'name', 'birthday'];
+var body = [
+  ['#1', '王小为', '1992-08-01', '备注：hustcc'], 
+  ['#2', '小泥巴', '1992-09-20'],
+  ['#3', '佚名', '保密']
+];
+
+// basic usage
+var wt = new WordTable(header, body);
+console.log(wt.string());
+
+// will print in console.
+
++----+----------+----------------+------------------+
+| id |   name   |    birthday    |                  |
++----+----------+----------------+------------------+
+| #1 |  王小为  |   1992-08-01   |   备注：hustcc   |
++----+----------+----------------+------------------+
+| #2 |  小泥巴  |   1992-09-20   |                  |
++----+----------+----------------+------------------+
+| #3 |   佚名   |      保密      |                  |
++----+----------+----------------+------------------+
+  </pre>
+  <h3>2. API methods</h3>
+  <pre>
+// the api method is so simple that documents are not needed.
+
+wt.setHeader(['id', 'name', 'birthday']);
+wt.appendBody(['#3', '佚名', '保密']);
+wt.setBody([['#4', '在线工具', '保密', 'atool.org']]);
+wt.array();
+wt.string();
+wt.reset();
+  </pre>
+  <hr />
+
+  <p>
+    The code of word-table hosted on Github, click <a href="https://github.com/hustcc/word-table">here</a>. Welcome to issue or pull request.
+  </p>
+</body>
+</html>
