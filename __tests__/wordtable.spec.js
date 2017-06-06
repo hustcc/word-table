@@ -1,7 +1,6 @@
-'use strict';
-var WordTable = require('../src/');
 
 test('WordTable', () => {
+  var WordTable = require('../src/');
   // start table data.
   var header = ['id', 'name', 'birthday'];
   var body = [
@@ -46,6 +45,16 @@ test('WordTable', () => {
 
   // chainable api
   console.log('\n\n========== test chainable api ==========');
+  var wt = new WordTable();
+  wt.reset()
+    .setHeader()
+    .setHeader(['id', 'name', 'birthday'])
+    .appendBody(['#3', '佚名', '保密']);
+  console.log(wt.string());
+
+  // chainable api
+  console.log('\n\n========== test dist file ==========');
+  var WordTable = require('..');
   var wt = new WordTable();
   wt.reset()
     .setHeader()

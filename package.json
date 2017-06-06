@@ -1,7 +1,7 @@
 {
   "name": "word-table",
   "officialName": "word-table",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "summary": "word-table is simple browserjs / nodejs library for drawing ascii tables in the terminal / console.",
   "description": "word-table is simple browserjs / nodejs library for drawing tables in the terminal/console.",
   "author": {
@@ -20,7 +20,7 @@
     "terminal table",
     "console table"
   ],
-  "main": "dist/word-width.min.js",
+  "main": "dist/word-table.min.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/hustcc/word-table"
