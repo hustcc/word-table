@@ -78,19 +78,19 @@ console.log(wt.string());
   <pre>
 // the api method is so simple that documents are not needed.
 
-wt.setHeader(['id', 'name', 'birthday']);
-wt.appendBody(['#3', '佚名', '保密']);
-wt.setBody([['#4', '在线工具', '保密', 'atool.org']]);
+wt.reset()
+  .setHeader(['id', 'name', 'birthday'])
+  .appendBody(['#3', '佚名', '保密']);
+  .setBody([['#4', '在线工具', '保密', 'atool.org']]);
+
 wt.array();
 wt.string();
-wt.reset();
   </pre>
   <hr />
 
   <p>
     The code of word-table hosted on Github, click <a href="https://github.com/hustcc/word-table">here</a>. Welcome to issue or pull request.
   </p>
-  <script type="text/javascript" src="demo/word-width.min.js"></script>
   <script type="text/javascript" src="dist/word-table.min.js"></script>
   <script type="text/javascript">
     function demo_table() {
@@ -102,7 +102,8 @@ wt.reset();
         ['#4', '', '', '访问：http://www.aTool.org/']
       ];
       // basic usage
-      var wt = new WordTable(header, body);
+      var wt = new WordTable();
+      wt.setBody(body).setHeader(header);
       document.getElementById('demo_pre').innerHTML = wt.string();
     }
   </script>

@@ -1,12 +1,11 @@
 'use strict';
-var test = require('tape');
-var WordTable = require('..');
+var WordTable = require('../src/');
 
-test('WordTable show be tested', function (t) {
+test('WordTable', () => {
   // start table data.
   var header = ['id', 'name', 'birthday'];
   var body = [
-    ['#1', '王小为', '1992-08-01', '备注：hustcc'], 
+    ['#1', '王小为', '1992-08-01', '备注：hustcc'],
     ['#2', '小泥巴', '1992-09-20'],
     ['#3', '佚名', '保密']
   ];
@@ -45,5 +44,12 @@ test('WordTable show be tested', function (t) {
   console.log('\n\n========== test to array ==========');
   console.log(wt.array());
 
-  t.end();
+  // chainable api
+  console.log('\n\n========== test chainable api ==========');
+  var wt = new WordTable();
+  wt.reset()
+    .setHeader()
+    .setHeader(['id', 'name', 'birthday'])
+    .appendBody(['#3', '佚名', '保密']);
+  console.log(wt.string());
 });
