@@ -52,13 +52,18 @@ test('WordTable', () => {
     .appendBody(['#3', '佚名', '保密']);
   console.log(wt.string());
 
+  // for int
+  wt.reset()
+    .setHeader(['id', 'name', 'birthday'])
+    .appendBody([1, 'TERM_PROGRAM', '/var/folders/mm/nnjn7j4d6270gf1cxzfm8y0w0000gn/T/']);
+  console.log(wt.string());
+
   // chainable api
   console.log('\n\n========== test dist file ==========');
   var WordTable = require('..');
   var wt = new WordTable();
   wt.reset()
-    .setHeader()
-    .setHeader(['id', 'name', 'birthday'])
+    .setHeader(['id', 'name', 'var'])
     .appendBody(['#3', '佚名', '保密']);
   console.log(wt.string());
 });

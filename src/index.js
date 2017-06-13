@@ -45,7 +45,7 @@ class WordTable {
       this._tableColLength.push(0); // 长度不够，添加一个长度
     }
 
-    const width = WordWidth(str);
+    const width = WordWidth(`${str}`); // 强制转字符串
     // 补齐 map
     while (this._wordWidthMap.length <= i) this._wordWidthMap.push([]);
 
