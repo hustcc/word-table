@@ -18,6 +18,7 @@ test('WordTable', () => {
   console.log('\n\n========== test setHeader ==========');
   wt.setHeader(header);
   console.log(wt.string());
+  
 
   // appendBody
   console.log('\n\n========== test appendBody ==========');
@@ -38,7 +39,13 @@ test('WordTable', () => {
   console.log('\n\n========== test only header ==========');
   wt.setHeader(header);
   console.log(wt.string());
-
+  
+  // test only body
+  console.log('\n\n========== test only body ==========');
+  wt.reset();
+  wt.setBody([['#4', '在线工具', '保密', 'atool.org']]);
+  console.log(wt.string());
+  
   // test to array
   console.log('\n\n========== test to array ==========');
   console.log(wt.array());

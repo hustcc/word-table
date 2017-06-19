@@ -57,7 +57,7 @@ class WordTable {
 
   _initDatas = () => {
     this._tableDatas = this._tableBody.concat();
-    this._tableDatas.splice(0, 0, this._tableHeader);
+    if (this._tableHeader.length > 0) this._tableDatas.splice(0, 0, this._tableHeader);
 
     // reset
     this._tableColLength = [];
